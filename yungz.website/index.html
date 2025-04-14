@@ -2,116 +2,92 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>YUNGZ</title>
+  <title>YUNGZ - ستايل يغير اللعبة</title>
+  <link href="https://fonts.googleapis.com/css2?family=Changa:wght@700&display=swap" rel="stylesheet">
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Cairo', sans-serif;
-      background: linear-gradient(to bottom, #e0e0e0, #ffffff);
+      padding: 0;
+      box-sizing: border-box;
     }
-    .header {
-      position: relative;
-      text-align: center;
-      color: #000;
+
+    body {
+      font-family: 'Changa', sans-serif;
+      background: linear-gradient(to bottom, #aaaaaa, #ffffff);
+      color: #111;
+      min-height: 100vh;
     }
-    .header img.bg {
+
+    .header-image {
       width: 100%;
-      height: 500px;
+      height: 300px;
       object-fit: cover;
+      display: block;
     }
-    .logo {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 2px solid #fff;
-    }
-    .title {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 60px;
-      font-weight: bold;
-    }
-    .subtitle {
-      position: absolute;
-      top: 65%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-size: 30px;
-    }
-    .whatsapp {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      background-color: #25D366;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-    }
-    .product {
+
+    .content {
+      padding: 60px 30px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin: 40px 0;
-    }
-    .product img {
-      width: 300px;
-      height: auto;
-      border-radius: 10px;
-    }
-    .price {
-      font-size: 24px;
-      margin: 10px 0;
-    }
-    .details-btn {
-      background-color: #000;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      cursor: pointer;
-    }
-    .details {
-      display: none;
-      margin-top: 10px;
       text-align: center;
+    }
+
+    .logo {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #444;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 300px;
+      color: #000;
+      margin: 10px 0;
+      line-height: 1;
+    }
+
+    p {
+      font-size: 36px;
+      color: #444;
+      margin-bottom: 40px;
+    }
+
+    .whatsapp {
+      background-color: #25D366;
+      color: white;
+      padding: 15px 30px;
+      text-decoration: none;
+      font-size: 22px;
+      border-radius: 10px;
+      position: absolute;
+      left: 30px;
+      top: 30px;
+    }
+
+    .bottom-space {
+      height: 300px;
     }
   </style>
 </head>
 <body>
+  <!-- صورة المحل -->
+  <img class="header-image" src="https://images.unsplash.com/photo-1603252109303-2751441dd157?auto=format&fit=crop&w=1350&q=80" alt="صورة المحل">
 
-  <div class="header">
-    <img class="bg" src="https://example.com/store.jpg" alt="Store Background">
-    <img class="logo" src="https://example.com/logo.jpg" alt="YUNGZ Logo">
-    <a class="whatsapp" href="https://wa.me/201028646201" target="_blank">تواصل عبر واتساب</a>
-    <div class="title">YUNGZ</div>
-    <div class="subtitle">ستايل يغير اللعبة</div>
+  <!-- زر واتساب -->
+  <a href="https://wa.me/201028646201" class="whatsapp">تواصل على واتساب</a>
+
+  <!-- المحتوى -->
+  <div class="content">
+    <img src="logo.png" alt="YUNGZ Logo" class="logo">
+    <h1>YUNGZ</h1>
+    <p>ستايل يغير اللعبة</p>
   </div>
 
-  <div class="product">
-    <img src="https://m.media-amazon.com/images/I/71dX1z6dJgL._AC_UY879_.jpg" alt="تيشيرت اندورا">
-    <div class="price">السعر: 350 جنيه</div>
-    <button class="details-btn" onclick="toggleDetails()">تفاصيل الخامة</button>
-    <div class="details" id="details">
-      <p>خامة قطن 100%، قصة عادية، أكمام قصيرة، نمط بيكيه.</p>
-    </div>
-  </div>
-
-  <script>
-    function toggleDetails() {
-      var details = document.getElementById('details');
-      if (details.style.display === 'none' || details.style.display === '') {
-        details.style.display = 'block';
-      } else {
-        details.style.display = 'none';
-      }
-    }
-  </script>
-
+  <!-- مساحة فاضية تحت -->
+  <div class="bottom-space"></div>
 </body>
 </html>
